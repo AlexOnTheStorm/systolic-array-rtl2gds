@@ -1,0 +1,13 @@
+# Trial RTL->GDS run: systolic_array 2x2, SKY130, LibreLane.
+# RTL is read from the sibling gemm_kernelgen repo (read-only).
+DESIGN_NAME: systolic_array
+VERILOG_FILES:
+  - dir::../../../gemm_kernelgen/rtl/pe.sv
+  - dir::../../../gemm_kernelgen/rtl/systolic_array.sv
+USE_SLANG: true              # SV frontend sv-elab (ex yosys-slang)
+SYNTH_PARAMETERS:
+  - ARRAY_M=2
+  - ARRAY_N=2
+CLOCK_PORT: clk
+CLOCK_PERIOD: 10             # ns (100 MHz), conservative for a trial
+FP_CORE_UTIL: 40

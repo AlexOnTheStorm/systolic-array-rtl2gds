@@ -1,0 +1,201 @@
+# grep WARNING|ERROR|Checker|violation from flow/r1_14ns.log
+────────────────────────── Lint Timing Errors Checker ──────────────────────────
+[20:17:21] VERBOSE  Running 'Checker.LintTimingConstructs' at       step.py:1138
+───────────────────────────── Lint Errors Checker ──────────────────────────────
+[20:17:21] VERBOSE  Running 'Checker.LintErrors' at                 step.py:1138
+──────────────────────────── Lint Warnings Checker ─────────────────────────────
+[20:17:21] VERBOSE  Running 'Checker.LintWarnings' at               step.py:1138
+[20:17:21] WARNING  446 Lint warnings found.                      checker.py:122
+──────────────────────────── Unmapped Cells Checker ────────────────────────────
+[20:17:35] VERBOSE  Running 'Checker.YosysUnmappedCells' at         step.py:1138
+[20:17:35] VERBOSE  Running 'Checker.YosysSynthChecks' at           step.py:1138
+─────────────────────── Netlist Assign Statement Checker ───────────────────────
+[20:17:35] VERBOSE  Running 'Checker.NetlistAssignStatements' at    step.py:1138
+[20:17:35] WARNING  'PNR_SDC_FILE' is not defined. Using generic openroad.py:184
+[20:17:35] WARNING  'SIGNOFF_SDC_FILE' is not defined. Using     openroad.py:188
+[20:17:50] WARNING  [GRT-0281] Net clk has a large fanout of     openroad.py:314
+[20:17:50] WARNING  [GRT-0281] Net en has a large fanout of 1217 openroad.py:314
+───────────────────────── Power Grid Violation Checker ─────────────────────────
+[20:17:52] VERBOSE  Running 'Checker.PowerGridViolations' at        step.py:1138
+                    'runs/r1_14ns/30-checker-powergridviolations'…
+[20:17:52] INFO     Check for power grid violations (as reported  checker.py:131
+[20:17:57] WARNING  [STA-1140]                                   openroad.py:314
+[20:17:57] WARNING  [STA-1140]                                   openroad.py:314
+[20:17:57] WARNING  [STA-1140]                                   openroad.py:314
+[20:17:57] WARNING  [STA-1140]                                   openroad.py:314
+[20:17:58] WARNING  [STA-1140]                                   openroad.py:314
+[20:17:58] WARNING  [STA-1140]                                   openroad.py:314
+[INFO RSZ-0034] Found 46 slew violations.
+[INFO RSZ-0035] Found 271 fanout violations.
+[20:18:08] WARNING  [RSZ-0020] found 2 floating nets.            openroad.py:314
+[20:18:13] WARNING  [STA-1140]                                   openroad.py:314
+[20:18:13] WARNING  [STA-1140]                                   openroad.py:314
+[20:18:14] WARNING  [STA-1140]                                   openroad.py:314
+[20:18:14] WARNING  [STA-1140]                                   openroad.py:314
+[20:18:14] WARNING  [STA-1140]                                   openroad.py:314
+[20:18:14] WARNING  [STA-1140]                                   openroad.py:314
+[20:18:35] WARNING  [STA-1140]                                   openroad.py:314
+[20:18:36] WARNING  [STA-1140]                                   openroad.py:314
+[20:18:36] WARNING  [STA-1140]                                   openroad.py:314
+[20:18:36] WARNING  [STA-1140]                                   openroad.py:314
+[20:18:36] WARNING  [STA-1140]                                   openroad.py:314
+[20:18:37] WARNING  [STA-1140]                                   openroad.py:314
+[INFO RSZ-0094] Found 11 endpoints with setup violations.
+[20:18:46] WARNING  [RSZ-0062] Unable to repair all setup        openroad.py:314
+                    violations.
+[INFO RSZ-0046] Found 439 endpoints with hold violations.
+[INFO GRT-0012] Found 17 antenna violations.
+[INFO GRT-0012] Found 0 antenna violations.
+[20:19:40] WARNING  [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS  openroad.py:314
+[20:19:40] WARNING  [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS  openroad.py:314
+[20:19:40] WARNING  [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS  openroad.py:314
+[20:19:40] WARNING  [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS  openroad.py:314
+[20:19:40] WARNING  [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS  openroad.py:314
+[20:19:40] WARNING  [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS  openroad.py:314
+[20:19:40] WARNING  [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS  openroad.py:314
+[20:19:40] WARNING  [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS  openroad.py:314
+[20:19:40] WARNING  [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS  openroad.py:314
+[20:19:40] WARNING  [DRT-0349] LEF58_ENCLOSURE with no CUTCLASS  openroad.py:314
+    Completing 10% with 0 violations.
+    Completing 20% with 0 violations.
+    Completing 30% with 555 violations.
+    Completing 40% with 555 violations.
+    Completing 50% with 555 violations.
+    Completing 60% with 1226 violations.
+    Completing 70% with 1226 violations.
+    Completing 80% with 1788 violations.
+    Completing 90% with 1788 violations.
+    Completing 100% with 2471 violations.
+[INFO DRT-0199]   Number of violations = 3208.
+    Completing 10% with 3208 violations.
+    Completing 20% with 3208 violations.
+    Completing 30% with 2789 violations.
+    Completing 40% with 2789 violations.
+    Completing 50% with 2789 violations.
+    Completing 60% with 2249 violations.
+    Completing 70% with 2249 violations.
+    Completing 80% with 1537 violations.
+    Completing 90% with 1537 violations.
+    Completing 100% with 831 violations.
+[INFO DRT-0199]   Number of violations = 831.
+    Completing 10% with 831 violations.
+    Completing 20% with 831 violations.
+    Completing 30% with 791 violations.
+    Completing 40% with 791 violations.
+    Completing 50% with 791 violations.
+    Completing 60% with 709 violations.
+    Completing 70% with 709 violations.
+    Completing 80% with 727 violations.
+    Completing 90% with 727 violations.
+    Completing 100% with 668 violations.
+[INFO DRT-0199]   Number of violations = 668.
+    Completing 10% with 668 violations.
+    Completing 20% with 668 violations.
+    Completing 30% with 517 violations.
+    Completing 40% with 517 violations.
+    Completing 50% with 517 violations.
+    Completing 60% with 295 violations.
+    Completing 70% with 295 violations.
+    Completing 80% with 180 violations.
+    Completing 90% with 180 violations.
+    Completing 100% with 7 violations.
+[INFO DRT-0199]   Number of violations = 7.
+    Completing 10% with 7 violations.
+    Completing 20% with 7 violations.
+    Completing 40% with 7 violations.
+    Completing 50% with 7 violations.
+    Completing 70% with 0 violations.
+    Completing 80% with 0 violations.
+    Completing 100% with 0 violations.
+[INFO DRT-0199]   Number of violations = 0.
+[INFO ANT-0002] Found 11 net violations.
+[INFO ANT-0001] Found 11 pin violations.
+[INFO GRT-0012] Found 13 antenna violations.
+    Completing 10% with 0 violations.
+    Completing 20% with 0 violations.
+    Completing 30% with 27 violations.
+    Completing 40% with 27 violations.
+    Completing 50% with 27 violations.
+    Completing 60% with 45 violations.
+    Completing 70% with 45 violations.
+    Completing 80% with 62 violations.
+    Completing 90% with 62 violations.
+    Completing 100% with 77 violations.
+[INFO DRT-0199]   Number of violations = 93.
+    Completing 10% with 93 violations.
+    Completing 20% with 93 violations.
+    Completing 30% with 79 violations.
+    Completing 40% with 79 violations.
+    Completing 50% with 79 violations.
+    Completing 60% with 42 violations.
+    Completing 70% with 42 violations.
+    Completing 80% with 30 violations.
+    Completing 90% with 30 violations.
+    Completing 100% with 7 violations.
+[INFO DRT-0199]   Number of violations = 7.
+    Completing 10% with 7 violations.
+    Completing 20% with 7 violations.
+    Completing 30% with 7 violations.
+    Completing 40% with 7 violations.
+    Completing 50% with 7 violations.
+    Completing 60% with 5 violations.
+    Completing 70% with 5 violations.
+    Completing 80% with 4 violations.
+    Completing 90% with 4 violations.
+    Completing 100% with 4 violations.
+[INFO DRT-0199]   Number of violations = 4.
+    Completing 10% with 4 violations.
+    Completing 30% with 4 violations.
+    Completing 50% with 4 violations.
+    Completing 60% with 4 violations.
+    Completing 80% with 0 violations.
+    Completing 100% with 0 violations.
+[INFO DRT-0199]   Number of violations = 0.
+[INFO ANT-0002] Found 0 net violations.
+[INFO ANT-0001] Found 0 pin violations.
+───────────────────────── Routing Design Rule Checker ──────────────────────────
+[20:22:02] VERBOSE  Running 'Checker.TrDRC' at                      step.py:1138
+────────────────────────── Disconnected Pins Checker ───────────────────────────
+[20:22:03] VERBOSE  Running 'Checker.DisconnectedPins' at           step.py:1138
+──────────────────────── Wire Length Threshold Checker ─────────────────────────
+[20:22:04] VERBOSE  Running 'Checker.WireLength' at                 step.py:1138
+[20:22:04] WARNING  Threshold for Threshold-surpassing long wires checker.py:108
+[20:22:20] WARNING  'VSRC_LOC_FILES' was not given a value,     openroad.py:2249
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime
+─────────────────── Magic vs. KLayout XOR Difference Checker ───────────────────
+[20:22:47] VERBOSE  Running 'Checker.XOR' at                        step.py:1138
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime
+────────────────────────── Magic Design Rule Checker ───────────────────────────
+[20:25:09] VERBOSE  Running 'Checker.MagicDRC' at                   step.py:1138
+───────────────────────── KLayout Design Rule Checker ──────────────────────────
+[20:25:09] VERBOSE  Running 'Checker.KLayoutDRC' at                 step.py:1138
+WARNING: RLIMIT_NOFILE is above 1024 and Tcl_Version<9 this may cause runtime
+──────────────── Spice Extraction-based Illegal Overlap Checker ────────────────
+[20:25:54] VERBOSE  Running 'Checker.IllegalOverlap' at             step.py:1138
+────────────────────── Layout vs. Schematic Error Checker ──────────────────────
+[20:25:58] VERBOSE  Running 'Checker.LVS' at                        step.py:1138
+─────────────────────── Setup Timing Violations Checker ────────────────────────
+[20:25:58] VERBOSE  Running 'Checker.SetupViolations' at            step.py:1138
+                    'runs/r1_14ns/72-checker-setupviolations'…
+[20:25:58] WARNING  Setup violations found in the following       checker.py:626
+                    * max_ss_100C_1v60
+                    * min_ss_100C_1v60
+                    * nom_ss_100C_1v60
+[20:25:58] VERBOSE  No setup violations found                     checker.py:628
+──────────────────────── Hold Timing Violations Checker ────────────────────────
+[20:25:58] VERBOSE  Running 'Checker.HoldViolations' at             step.py:1138
+                    'runs/r1_14ns/73-checker-holdviolations'…
+[20:25:58] VERBOSE  No hold violations found                      checker.py:628
+─────────────────────── Maximum Slew Violations Checker ────────────────────────
+[20:25:58] VERBOSE  Running 'Checker.MaxSlewViolations' at          step.py:1138
+                    'runs/r1_14ns/74-checker-maxslewviolations'…
+[20:25:58] WARNING  Max Slew violations found in the following    checker.py:626
+                    * max_ff_n40C_1v95
+                    * max_ss_100C_1v60
+                    * max_tt_025C_1v80
+                    * min_ss_100C_1v60
+                    * min_tt_025C_1v80
+                    * nom_ff_n40C_1v95
+                    * nom_ss_100C_1v60
+                    * nom_tt_025C_1v80

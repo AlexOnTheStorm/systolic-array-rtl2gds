@@ -1,0 +1,31 @@
+# max-slew violating pins in max_ss_100C_1v60: 4205; grouped by root driver of their buffer tree
+   492  _10603_ (inv_2) -> net _03482_; inputs from ['en']
+   439  _10623_ (and2b_2) -> net _03502_; inputs from ['clear', 'rst_n']
+   259  port/undriven:en
+    42  _21589_ (dfxtp_2) -> net \g_row[1].g_col[1].u_pe.prod_r[15]; inputs from ['clk', 'logic']
+    42  _22101_ (dfxtp_2) -> net \g_row[3].g_col[1].u_pe.prod_r[15]; inputs from ['clk', 'logic']
+    42  _21525_ (dfxtp_2) -> net \g_row[1].g_col[0].u_pe.prod_r[15]; inputs from ['clk', 'logic']
+    40  _21781_ (dfxtp_2) -> net \g_row[2].g_col[0].u_pe.prod_r[15]; inputs from ['clk', 'logic']
+    33  _21333_ (dfxtp_2) -> net \g_row[0].g_col[1].u_pe.prod_r[15]; inputs from ['clk', 'logic']
+    33  _22165_ (dfxtp_2) -> net \g_row[3].g_col[2].u_pe.prod_r[15]; inputs from ['clk', 'logic']
+    33  _21461_ (dfxtp_2) -> net \g_row[0].g_col[3].u_pe.prod_r[15]; inputs from ['clk', 'logic']
+    33  _22229_ (dfxtp_2) -> net \g_row[3].g_col[3].u_pe.prod_r[15]; inputs from ['clk', 'logic']
+    33  _21973_ (dfxtp_2) -> net \g_row[2].g_col[3].u_pe.prod_r[15]; inputs from ['clk', 'logic']
+    32  _21845_ (dfxtp_2) -> net \g_row[2].g_col[1].u_pe.prod_r[15]; inputs from ['clk', 'logic']
+    30  _21397_ (dfxtp_2) -> net \g_row[0].g_col[2].u_pe.prod_r[15]; inputs from ['clk', 'logic']
+    30  _21653_ (dfxtp_2) -> net \g_row[1].g_col[2].u_pe.prod_r[15]; inputs from ['clk', 'logic']
+
+# by category: operand regs a_h/b_v/a_r/b_r: 2508, en: 751, prod_r[15] (product sign bit): 502, clear/rst_n: 444
+
+# cell types of resizer-inserted buffers (instances named fanout*/input*/output*/load_slew*/max_cap*/wire*)
+  1518  clkdlybuf4s25_1
+    27  clkbuf_4
+    17  buf_2
+    16  buf_4
+    12  clkbuf_2
+     3  dlygate4sd1_1
+     2  dlymetal6s2s_1
+     2  dlymetal6s4s_1
+     1  buf_6
+     1  clkbuf_1
+     1  buf_1

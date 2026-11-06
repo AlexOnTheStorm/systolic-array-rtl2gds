@@ -1,0 +1,22 @@
+# max-slew violating pins in nom_tt_025C_1v80: 53; grouped by root driver of their buffer tree
+    13  _10623_ (and2b_2) -> net _03502_; inputs from ['clear', 'rst_n']
+    11  _21337_ (dfxtp_2) -> net \a_h[131]; inputs from ['clk', 'logic']
+    11  _21333_ (dfxtp_2) -> net \g_row[0].g_col[1].u_pe.prod_r[15]; inputs from ['clk', 'logic']
+    10  _10603_ (inv_2) -> net _03482_; inputs from ['en']
+     8  port/undriven:en
+
+# by category: en: 18, clear/rst_n: 13, operand regs a_h/b_v/a_r/b_r: 11, prod_r[15] (product sign bit): 11
+
+# cell types of resizer-inserted buffers (instances named fanout*/input*/output*/load_slew*/max_cap*/wire*)
+  1169  clkdlybuf4s25_1
+   145  buf_2
+    77  clkbuf_2
+    63  clkbuf_4
+    54  buf_4
+    34  dlymetal6s2s_1
+    30  buf_6
+    27  dlymetal6s4s_1
+     7  buf_8
+     3  dlygate4sd1_1
+     3  clkdlybuf4s15_2
+     1  clkbuf_1

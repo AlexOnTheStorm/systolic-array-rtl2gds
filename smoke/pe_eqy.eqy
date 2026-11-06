@@ -1,0 +1,19 @@
+# EQY "hello": RTL pe.sv (gold) vs Yosys generic netlist (gate).
+[gold]
+read_slang ../../gemm_kernelgen/rtl/pe.sv --top pe
+prep -top pe
+
+[gate]
+read_slang ../../gemm_kernelgen/rtl/pe.sv --top pe
+# keep on flip-flops: otherwise opt_merge merges a_r with a_out (identical next-state),
+# the 1:1 register correspondence is lost and partition prod_r does not prove
+proc
+setattr -set keep 1 t:*dff*
+synth -top pe -flatten
+opt_clean -purge
+
+[strategy sby]
+use sby
+depth 5
+engine smtbmc bitwuzla
+

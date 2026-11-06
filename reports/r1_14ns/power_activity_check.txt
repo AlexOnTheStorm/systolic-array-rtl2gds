@@ -1,0 +1,20 @@
+# OpenSTA default switching activity check (tools/power_default_check.tcl on runs/r1_14ns, nom_tt, nom SPEF)
+# command: see README 'Power'; full log flow/tools/power_default_check.log (gitignored)
+== A: defaults (no set_power_activity)
+Group                  Internal  Switching    Leakage      Total
+Sequential             3.04e-03   1.49e-04   8.80e-09   3.19e-03  38.6%
+Combinational          1.03e-03   1.13e-03   4.93e-08   2.16e-03  26.2%
+Clock                  1.55e-03   1.36e-03   1.23e-07   2.91e-03  35.2%
+Total                  5.62e-03   2.63e-03   1.81e-07   8.25e-03 100.0%
+== B: set_power_activity -input -activity 0.1 -duty 0.5
+Group                  Internal  Switching    Leakage      Total
+Sequential             3.04e-03   1.49e-04   8.80e-09   3.19e-03  38.6%
+Combinational          1.03e-03   1.13e-03   4.93e-08   2.16e-03  26.2%
+Clock                  1.55e-03   1.36e-03   1.23e-07   2.91e-03  35.2%
+Total                  5.62e-03   2.63e-03   1.81e-07   8.25e-03 100.0%
+== C: set_power_activity -input -activity 0.5 -duty 0.5
+Group                  Internal  Switching    Leakage      Total
+Sequential             3.56e-03   7.44e-04   8.80e-09   4.30e-03  23.9%
+Combinational          5.15e-03   5.64e-03   4.93e-08   1.08e-02  59.9%
+Clock                  1.55e-03   1.36e-03   1.23e-07   2.91e-03  16.2%
+Total                  1.03e-02   7.74e-03   1.81e-07   1.80e-02 100.0%

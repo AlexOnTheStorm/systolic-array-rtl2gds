@@ -1,0 +1,13 @@
+[options]
+mode prove
+
+[engines]
+smtbmc
+
+[script]
+read -formal pe.sv pe_hello_props.sv
+prep -top pe_hello_props
+
+[files]
+../../gemm_kernelgen/rtl/pe.sv
+pe_hello_props.sv

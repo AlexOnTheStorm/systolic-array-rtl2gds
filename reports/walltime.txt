@@ -1,0 +1,2 @@
+2026-11-03 21:16 tag=r0_10ns overrides=[CLOCK_PERIOD=10] rc=0 wall_s=677
+2026-11-03 21:25 tag=r1_14ns overrides=[] rc=0 wall_s=520

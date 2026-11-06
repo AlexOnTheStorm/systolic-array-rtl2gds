@@ -1,0 +1,11 @@
+# Smoke synthesis of pe.sv for SKY130 HD (typical corner) with Yosys from OSS CAD Suite.
+# Run: yosys -l synth_pe.log synth_pe.ys   (from this folder; the Liberty file is a symlink here:
+#   ln -sf ~/.ciel/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib . -- env.md section 3.2)
+read_slang ../../gemm_kernelgen/rtl/pe.sv --top pe
+synth -top pe -flatten
+dfflibmap -liberty sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty sky130_fd_sc_hd__tt_025C_1v80.lib -dont_use *lpflow* -D 10000
+opt_clean -purge
+hilomap -hicell sky130_fd_sc_hd__conb_1 HI -locell sky130_fd_sc_hd__conb_1 LO
+tee -o synth_pe_stat.txt stat -liberty sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog -noattr pe_netlist.v

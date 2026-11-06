@@ -1,0 +1,29 @@
+# Same-path evidence r0_10ns vs r1_14ns (fix round 1). Extracted from reports/*/worst_*.rpt and step netlists in flow/runs/ (not in git).
+
+## Overall worst ss path in BOTH runs: input en -> _21926_/D (max_ss_100C_1v60)
+r0_10ns: input delay 2.000000, arrival 13.529128, port-to-D data delay 11.529 ns
+  r0_10ns: fanout1596/X (sky130_fd_sc_hd__dlymetal6s4s_1)  delay 1.137555 ns
+  r0_10ns: fanout1425/X (sky130_fd_sc_hd__clkbuf_4)  delay 0.934725 ns
+  r0_10ns: fanout1378/X (sky130_fd_sc_hd__clkdlybuf4s25_1)  delay 1.647683 ns
+r1_14ns: input delay 2.800000, arrival 16.584230, port-to-D data delay 13.784 ns
+  r1_14ns: fanout1596/X (sky130_fd_sc_hd__clkdlybuf4s25_1)  delay 1.160487 ns
+  r1_14ns: fanout1425/X (sky130_fd_sc_hd__clkdlybuf4s25_1)  delay 2.010620 ns
+  r1_14ns: fanout1378/X (sky130_fd_sc_hd__clkdlybuf4s25_1)  delay 1.499821 ns
+
+## Cell type of en-tree buffers per step netlist (32 repair_design, 34 detailed placement, 37 post-CTS resizer)
+  r0_10ns 32-openroad-repairdesignpostgpl fanout1596: sky130_fd_sc_hd__clkdlybuf4s25_1
+  r0_10ns 32-openroad-repairdesignpostgpl fanout1425: sky130_fd_sc_hd__clkdlybuf4s25_1
+  r0_10ns 34-openroad-detailedplacement fanout1596: sky130_fd_sc_hd__clkdlybuf4s25_1
+  r0_10ns 34-openroad-detailedplacement fanout1425: sky130_fd_sc_hd__clkdlybuf4s25_1
+  r0_10ns 37-openroad-resizertimingpostcts fanout1596: sky130_fd_sc_hd__dlymetal6s4s_1
+  r0_10ns 37-openroad-resizertimingpostcts fanout1425: sky130_fd_sc_hd__clkbuf_4
+  r1_14ns 32-openroad-repairdesignpostgpl fanout1596: sky130_fd_sc_hd__clkdlybuf4s25_1
+  r1_14ns 32-openroad-repairdesignpostgpl fanout1425: sky130_fd_sc_hd__clkdlybuf4s25_1
+  r1_14ns 34-openroad-detailedplacement fanout1596: sky130_fd_sc_hd__clkdlybuf4s25_1
+  r1_14ns 34-openroad-detailedplacement fanout1425: sky130_fd_sc_hd__clkdlybuf4s25_1
+  r1_14ns 37-openroad-resizertimingpostcts fanout1596: sky130_fd_sc_hd__clkdlybuf4s25_1
+  r1_14ns 37-openroad-resizertimingpostcts fanout1425: sky130_fd_sc_hd__clkdlybuf4s25_1
+
+## Worst reg-to-reg ss path (different endpoints in the two runs)
+r0_10ns: start _21337_, launch clock arrival 2.192059, data arrival 12.292796, data-path delay 10.10 ns, slack -0.667066
+r1_14ns: start _21721_, launch clock arrival 2.233848, data arrival 16.488928, data-path delay 14.26 ns, slack -0.893474

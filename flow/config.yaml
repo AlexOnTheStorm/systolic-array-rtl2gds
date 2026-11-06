@@ -1,0 +1,14 @@
+# RTL->GDS flow config: gemm systolic_array 4x4 (16 INT8 MAC PEs), SKY130A / sky130_fd_sc_hd,
+# LibreLane 3.0.17 Classic flow. Run with ./run_flow.sh (see ../README.md).
+# RTL is read from the sibling gemm_kernelgen repo and is never modified (mounted read-only).
+DESIGN_NAME: systolic_array
+VERILOG_FILES:
+  - dir::../../gemm_kernelgen/rtl/pe.sv
+  - dir::../../gemm_kernelgen/rtl/systolic_array.sv
+USE_SLANG: true              # SystemVerilog frontend (sv-elab, ex yosys-slang)
+SYNTH_PARAMETERS:
+  - ARRAY_M=4
+  - ARRAY_N=4
+CLOCK_PORT: clk
+CLOCK_PERIOD: 14             # ns (~71.4 MHz): tuned so the ss_100C_1v60 corner can close; baseline r0 used 10
+FP_CORE_UTIL: 40             # % of core area for std cells at floorplan

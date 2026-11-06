@@ -1,0 +1,14 @@
+# LibreLane runs (hundreds of MB) -- not in git
+**/runs/
+# SymbiYosys / EQY work directories
+smoke/pe_hello/
+smoke/pe_eqy/
+# generated smoke-test files (reproducible with the commands in env.md)
+smoke/*.log
+smoke/flow_2x2/*.log
+smoke/pe_netlist.v
+smoke/synth_pe_stat.txt
+smoke/sky130_fd_sc_hd__tt_025C_1v80.lib
+# flow/: LibreLane logs are large and reproducible; extracts are in reports/
+flow/*.log
+flow/tools/*.log
